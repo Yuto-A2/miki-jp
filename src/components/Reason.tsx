@@ -5,7 +5,7 @@ export default function Reason() {
 
             <h2 className="text-lg text-center mt-2 font-bold relative after:content-[''] after:block after:w-50 after:h-[2px]
                after:bg-black after:mx-auto after:mt-1">Why ミキティ Japanese?</h2>
-            <div className="flex mt-4 lg:flex-row lg:items-stretch sm:items-center justify-center sm:flex-col">
+            <div className="flex flex-col mt-4 lg:flex-row lg:items-stretch items-center justify-center">
                 <div className="bg-[#B7B1F2] text-white p-3 w-[40%]">
                     <h3 className="text-center relative after:content-[''] after:block after:w-12 after:h-[2px] after:bg-white after:mx-auto">Example1</h3>
                     <p className="mt-2">Example here</p>
@@ -17,7 +17,7 @@ export default function Reason() {
                     <img className="h-full w-full object-cover " src="/onlineClass.jpg" alt="" /></div>
             </div>
 
-                 <div className="flex mt-4 lg:flex-row lg:items-stretch sm:items-center justify-center sm:flex-col">
+                 <div className="flex flex-col mt-4 lg:flex-row lg:items-stretch items-center justify-center">
                 <div className="bg-[#B7B1F2] text-white p-3 w-[40%]">
                     <h3 className="text-center relative after:content-[''] after:block after:w-12 after:h-[2px] after:bg-white after:mx-auto">Example2</h3>
                     <p className="mt-2">Example here</p>
@@ -29,7 +29,7 @@ export default function Reason() {
                     <img className="h-full w-full object-cover" src="/onlineClass.jpg" alt="" /></div>
             </div>
 
-                 <div className="flex mt-4 lg:flex-row lg:items-stretch sm:items-center justify-center sm:flex-col">
+                 <div className="flex flex-col mt-4 lg:flex-row lg:items-stretch items-center justify-center">
                 <div className="bg-[#B7B1F2] text-white p-3 w-[40%]">
                     <h3 className="text-center relative after:content-[''] after:block after:w-12 after:h-[2px] after:bg-white after:mx-auto">Example3</h3>
                     <p className="mt-2">Example here</p>
