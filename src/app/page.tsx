@@ -3,6 +3,7 @@ import ClassImg from "@/components/ClassImg";
 import Reason from "@/components/Reason";
 import ClassHour from "@/components/ClassHour";
 import RegisterBtn from "@/components/RegisterBtn";
+import Price from "@/components/Price";
 export default function Home() {
   return (
     <>
@@ -12,6 +13,7 @@ export default function Home() {
         <Reason />
         <ClassHour />
         <RegisterBtn />
+        <Price />
       </main>
     </>
   );
