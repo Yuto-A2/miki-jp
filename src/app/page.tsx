@@ -4,6 +4,8 @@ import Reason from "@/components/Reason";
 import ClassHour from "@/components/ClassHour";
 import RegisterBtn from "@/components/RegisterBtn";
 import Price from "@/components/Price";
+import Course from "@/components/Course";
+import ContactUs from "@/components/ContactUs";
 export default function Home() {
   return (
     <>
@@ -14,6 +16,8 @@ export default function Home() {
         <ClassHour />
         <RegisterBtn />
         <Price />
+        <Course />
+        <ContactUs />
       </main>
     </>
   );
