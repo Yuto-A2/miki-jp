@@ -3,7 +3,7 @@ export default function Reason() {
         <>
             {/* why mikity japanese */}
 
-            <h2 className="text-lg text-center mt-2 font-bold relative after:content-[''] after:block after:w-50 after:h-[2px]
+            <h2 className="text-lg text-center mt-5 font-bold relative after:content-[''] after:block after:w-50 after:h-[2px]
                after:bg-black after:mx-auto after:mt-1">Why ミキティ Japanese?</h2>
             <div className="flex flex-col mt-4 lg:flex-row lg:items-stretch items-center justify-center">
                 <div className="bg-[#B7B1F2] text-white p-3 lg:w-[40%]">

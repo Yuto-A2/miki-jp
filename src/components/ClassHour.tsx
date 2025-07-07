@@ -2,7 +2,7 @@
 export default function ClassHour() {
     return (
         <>
-            <h2 className="text-lg text-center mt-2 font-bold relative after:content-[''] after:block after:w-50 after:h-[2px]
+            <h2 className="text-lg text-center mt-5 font-bold relative after:content-[''] after:block after:w-50 after:h-[2px]
                after:bg-black after:mx-auto after:mt-1">Class Hour</h2>
             <div className="w-full overflow-auto">
                 <table className="mx-auto border-2 border-black mt-2 min-w-[600px]">

@@ -1,4 +1,5 @@
 import Header from "@/components/layouts/Header";
+import Footer from "@/components/layouts/Footer";
 import ClassImg from "@/components/ClassImg";
 import Reason from "@/components/Reason";
 import ClassHour from "@/components/ClassHour";
@@ -19,6 +20,7 @@ export default function Home() {
         <Course />
         <ContactUs />
       </main>
+      <Footer />
     </>
   );
 }
