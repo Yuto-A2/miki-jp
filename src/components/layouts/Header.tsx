@@ -75,10 +75,12 @@ export default function Header() {
 
                         <div className="grid grid-cols-4 gap-6 mt-2">
                             <div>
-                                <img
-                                    src="/img/elementary.jpg"
+                                <Image
+                                    src="/Osaka.jpg"
                                     alt="Osaka Dialog Course"
-                                    className="mb-2 w-full h-auto"
+                                    className="mb-2 w-full h-48 object-cover"
+                                    width={300}
+                                    height={200}
                                 />
                                 <h3 className="font-bold border-b border-red-500 mb-2 pb-1">
                                     Osaka Dialog Course
@@ -86,15 +88,36 @@ export default function Header() {
                             </div>
 
                             <div>
-                                <img src="/img/middle.jpg" alt="Beginner Course" className="mb-2 w-full h-auto" />
+                                <Image
+                                    src="/Hiragana.jpg"
+                                    alt="Beginner Course"
+                                    className="mb-2 w-full h-48 object-cover"
+                                    width={300}
+                                    height={200}
+                                />
                                 <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Beginner Course</h3>
                             </div>
+
+
                             <div>
-                                <img src="/img/highschool.jpg" alt="Intermediate Course" className="mb-2 w-full h-auto" />
+                                <Image
+                                    src="/japan.jpg"
+                                    alt="Intermediate Course"
+                                    className="mb-2 w-full h-48 object-cover"
+                                    width={300}
+                                    height={200}
+                                />
                                 <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Intermediate Course</h3>
                             </div>
+
                             <div>
-                                <img src="/img/online.jpg" alt="Advance Course" className="mb-2 w-full h-auto" />
+                                <Image
+                                    src="/news.jpg"
+                                    alt="Intermediate Course"
+                                    className="mb-2 w-full h-48 object-cover"
+                                    width={300}
+                                    height={200}
+                                />
                                 <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Advance Course</h3>
                             </div>
                         </div>
