@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 
 export default function Header() {
@@ -29,19 +30,23 @@ export default function Header() {
 
     return (
         <header className="bg-red-200 h-auto">
-            <div className="flex items-center">
-                <Image
-                    className="rounded-full mr-2 ml-5 mt-2"
-                    src="/logo.png"
-                    alt="logo"
-                    width={30}
-                    height={15}
-                />
-                <h1 className="text-lg mt-2">ミキティ Japanese</h1>
-            </div>
+            <Link href={'/'}>
+                <div className="flex items-center">
+                    <Image
+                        className="rounded-full mr-2 ml-5 mt-2"
+                        src="/logo.png"
+                        alt="logo"
+                        width={30}
+                        height={15}
+                    />
+                    <h1 className="text-lg mt-2">ミキティ Japanese</h1>
+                </div>
+            </Link>
 
             <ul className="flex gap-4 justify-center">
-                <li className="border-r pr-3">Home</li>
+                <Link href={'/'}>
+                    <li className="border-r pr-3">Home</li>
+                </Link>
 
                 <div
                     className="relative border-r pr-3"
@@ -76,7 +81,7 @@ export default function Header() {
                         <div className="grid grid-cols-4 gap-6 mt-2">
                             <div>
                                 <Image
-                                    src="/Osaka.jpg"
+                                    src="/osaka.jpg"
                                     alt="Osaka Dialog Course"
                                     className="mb-2 w-full h-48 object-cover"
                                     width={300}
@@ -89,7 +94,7 @@ export default function Header() {
 
                             <div>
                                 <Image
-                                    src="/Hiragana.jpg"
+                                    src="/hiragana.jpg"
                                     alt="Beginner Course"
                                     className="mb-2 w-full h-48 object-cover"
                                     width={300}
@@ -123,8 +128,9 @@ export default function Header() {
                         </div>
                     </div>
                 )}
-
-                <li>Contact</li>
+                <Link href={'#contact'}>
+                    <li>Contact</li>
+                </Link>
             </ul>
         </header>
     );

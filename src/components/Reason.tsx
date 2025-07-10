@@ -18,6 +18,9 @@ export default function Reason() {
                     <p>
                         The instructor is a native speaker of the Osaka dialect and will teach you authentic, natural expressions just for you.
                     </p>
+                    <p>
+                        From everyday conversation to comedic phrases, you&#39;ll enjoy learning while gaining a deeper understanding of the Kansai vibe.
+                    </p>
                 </div>
                 <div className="w-full lg:w-[40%]">
                     <Image
@@ -38,6 +41,15 @@ export default function Reason() {
                     </p>
                     <p>
                         You can learn at your own pace and on your own schedule.
+                    </p>
+                    <p>
+                        Whether you&#39;re at home, in a café, or traveling, you&#39;re always welcome to join.
+                    </p>
+                    <p>
+                        No commute, no time wasted—just pure, focused learning.
+                    </p>
+                    <p>
+                        All you need is an internet connection and a passion for learning Japanese!
                     </p>
                 </div>
                 <div className="w-full lg:w-[40%]">

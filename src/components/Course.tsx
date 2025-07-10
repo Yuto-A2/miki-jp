@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import CourseBtn from './CourseBtn';
 
 export default function Course() {
     return (
@@ -16,7 +17,8 @@ export default function Course() {
                         paragraphs: [
                             "In the Osaka Dialect Course, you'll learn natural Osaka dialect from a teacher who is originally from Osaka.",
                             "Why not give it a try and learn this unique dialect that's becoming increasingly popular among Japanese learners?"
-                        ]
+                        ],
+                        link: "#"
                     },
                     {
                         title: 'Beginner Course',
@@ -26,7 +28,8 @@ export default function Course() {
                             "If that sounds like you, this beginner course is the perfect place to begin.",
                             "We'll support you step by step as you build a strong foundation in reading, writing, listening, and speaking.",
                             "Let's enjoy learning together and gain confidence along the way!"
-                        ]
+                        ],
+                        link: "#"
                     },
                     {
                         title: 'Intermediate Course',
@@ -35,7 +38,8 @@ export default function Course() {
                             "This course is perfect for learners who already know the basics and want to improve their Japanese even further.",
                             "You'll learn more complex grammar, expand your vocabulary, and practice real-life conversations.",
                             "Let's take your Japanese to the next level together!"
-                        ]
+                        ],
+                        link: "#"
                     },
                     {
                         title: 'Advance Course',
@@ -44,7 +48,8 @@ export default function Course() {
                             "This advanced course is designed for learners who want to express their thoughts and opinions in Japanese with confidence and depth.",
                             "Through news articles, essays, and discussions, you'll learn more sophisticated grammar and vocabulary.",
                             "Take your Japanese to a near-native level and speak with fluency and nuance."
-                        ]
+                        ],
+                        link: "#"
                     }
                 ].map((course, i) => (
                     <div key={i} className="flex flex-col h-full border border-black">
@@ -64,6 +69,9 @@ export default function Course() {
                             {course.paragraphs.map((text, idx) => (
                                 <p key={idx} className="mb-2">{text}</p>
                             ))}
+                            <div className="mt-auto text-center">
+                                <CourseBtn href={course.link} />
+                            </div>
                         </div>
                     </div>
                 ))}
