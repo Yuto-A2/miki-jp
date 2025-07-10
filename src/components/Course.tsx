@@ -12,7 +12,7 @@ export default function Course() {
                 {[
                     {
                         title: 'Osaka Dialect Course',
-                        image: '/Osaka.jpg',
+                        image: '/osaka.jpg',
                         paragraphs: [
                             "In the Osaka Dialect Course, you'll learn natural Osaka dialect from a teacher who is originally from Osaka.",
                             "Why not give it a try and learn this unique dialect that's becoming increasingly popular among Japanese learners?"
@@ -20,7 +20,7 @@ export default function Course() {
                     },
                     {
                         title: 'Beginner Course',
-                        image: '/Hiragana.jpg',
+                        image: '/hiragana.jpg',
                         paragraphs: [
                             `"I'm interested in learning Japanese, but I don't know where to start."`,
                             "If that sounds like you, this beginner course is the perfect place to begin.",
