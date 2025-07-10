@@ -6,10 +6,6 @@ export async function POST(request: Request | NextRequest) {
     const mail = process.env.MAIL_ACCOUNT;
     const pass = process.env.MAIL_PASSWORD;
 
-    console.log("MAIL:", mail);
-    console.log("PASS:", pass);
-
-
     if (!mail || !pass) {
         return new Response("Mail credentials are missing", { status: 500 });
     }
