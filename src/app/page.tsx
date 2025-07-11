@@ -15,6 +15,7 @@ export default function Home() {
         <ClassImg />
         <Reason />
         <ClassHour />
+        <p className="text-center mt-4 font-bold">&#42;I can adjust the time if needed, just let me know your availability.</p>
         <RegisterBtn />
         <Price />
         <Course />

@@ -10,28 +10,24 @@ export default function ClassHour() {
                         <tr>
                             <th className="border px-4 py-2">Monday</th>
                             <th className="border px-4 py-2">Tuesday</th>
-                            <th className="border px-4 py-2">Wednesday</th>
                             <th className="border px-4 py-2">Thursday</th>
                             <th className="border px-4 py-2">Friday</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td className="border px-4 py-2">5 PM to 6 PM</td>
-                            <td className="border px-4 py-2">5 PM to 6 PM</td>
-                            <td className="border px-4 py-2">5 PM to 6 PM</td>
-                            <td className="border px-4 py-2">5 PM to 6 PM</td>
-                            <td className="border px-4 py-2">5 PM to 6 PM</td>
+                            <td className="border px-4 py-2">5 PM to 6 PM</td> 
+                            <td className="border px-4 py-2">5 PM to 6 PM</td> 
+                            <td className="border px-4 py-2">5 PM to 6 PM</td> 
+                            <td className="border px-4 py-2">5 PM to 6 PM</td> 
                         </tr>
                         <tr className="bg-gray-400">
                             <td className="border px-4 py-2">6:15 PM to 7:15 PM</td>
                             <td className="border px-4 py-2">6:15 PM to 7:15 PM</td>
                             <td className="border px-4 py-2">6:15 PM to 7:15 PM</td>
                             <td className="border px-4 py-2">6:15 PM to 7:15 PM</td>
-                            <td className="border px-4 py-2">6:15 PM to 7:15 PM</td>
                         </tr>
                         <tr>
-                            <td className="border px-4 py-2">7:30 PM to 8:30 PM</td>
                             <td className="border px-4 py-2">7:30 PM to 8:30 PM</td>
                             <td className="border px-4 py-2">7:30 PM to 8:30 PM</td>
                             <td className="border px-4 py-2">7:30 PM to 8:30 PM</td>
