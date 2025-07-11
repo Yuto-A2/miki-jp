@@ -34,4 +34,3 @@ export async function POST(request: Request | NextRequest) {
         return new Response("Failed to send email", { status: 500 });
     }
 }
-
