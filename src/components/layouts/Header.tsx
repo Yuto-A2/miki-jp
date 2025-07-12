@@ -67,9 +67,9 @@ export default function Header() {
             <Link href="/">Home</Link>
           </li>
 
-          {/* Course メニュー */}
+          {/* Course Menu */}
           <li className="cursor-pointer">
-            {/* スマホ表示 */}
+            {/* Smartphone */}
             <div className="md:hidden">
               <span>Course</span>
               {menuOpen && (
@@ -82,7 +82,7 @@ export default function Header() {
               )}
             </div>
 
-            {/* PC表示 */}
+            {/* PC */}
             <div
               className="relative hidden md:block"
               onMouseEnter={() => setIsOpen(true)}
