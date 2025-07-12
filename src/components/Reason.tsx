@@ -7,7 +7,7 @@ export default function Reason() {
             <h2 className="text-lg text-center mt-5 font-bold relative after:content-[''] after:block after:w-50 after:h-[2px]
                after:bg-black after:mx-auto after:mt-1">Why ミキティ Japanese?</h2>
             <div className="flex flex-col mt-4 lg:flex-row lg:items-stretch items-center justify-center">
-                <div className="bg-[#B7B1F2] p-3 lg:w-[40%] w-full flex flex-col justify-center">
+                <div className="bg-[#B7B1F2] p-3 lg:w-[40%] w-[90%] flex flex-col justify-center">
                     <h3 className="text-center relative after:content-[''] after:block after:w-56 after:h-[2px] after:bg-black after:mx-auto mb-8">Native Osaka Dialect</h3>
                     <p>
                         Do you want to learn the Osaka dialect from someone who&#39;s actually from Osaka?
@@ -22,7 +22,7 @@ export default function Reason() {
                         From everyday conversation to comedic phrases, you&#39;ll enjoy learning while gaining a deeper understanding of the Kansai vibe.
                     </p>
                 </div>
-                <div className="w-full lg:w-[40%]">
+                <div className="w-[90%] lg:w-[40%]">
                     <Image
                         src="/osaka.jpg"
                         alt="Beginner Course"
@@ -34,7 +34,7 @@ export default function Reason() {
             </div>
 
             <div className="flex flex-col mt-4 lg:flex-row lg:items-stretch items-center justify-center">
-                <div className="bg-[#B7B1F2] p-3 lg:w-[40%] w-full flex flex-col justify-center">
+                <div className="bg-[#B7B1F2] p-3 lg:w-[40%] w-[90%] flex flex-col justify-center">
                     <h3 className="text-center relative after:content-[''] after:block after:w-56 after:h-[2px] after:bg-black after:mx-auto mb-8">Anywhere you want to learn</h3>
                     <p>
                         Because the classes are online, you can join from anywhere in the world.
@@ -52,7 +52,7 @@ export default function Reason() {
                         All you need is an internet connection and a passion for learning Japanese!
                     </p>
                 </div>
-                <div className="w-full lg:w-[40%]">
+                <div className="w-[90%] lg:w-[40%]">
                     <Image
                         src="/anywhere.jpg"
                         alt="Beginner Course"

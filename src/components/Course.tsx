@@ -8,7 +8,7 @@ export default function Course() {
                 Course
             </h2>
 
-            <div className="mb-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-screen-xl mx-auto mt-6 items-stretch">
+            <div className="mb-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-screen-xl mx-auto mt-6 items-stretch w-[90%]">
                 {/* Card */}
                 {[
                     {
