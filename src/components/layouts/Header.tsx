@@ -70,15 +70,52 @@ export default function Header() {
           {/* Course Menu */}
           <li className="cursor-pointer">
             {/* Smartphone */}
-            <div className="md:hidden">
-              <span>Course</span>
-              {menuOpen && (
-                <ul className="flex flex-col gap-2 mt-2 text-black">
-                  <li>Osaka Dialog Course</li>
-                  <li>Beginner Course</li>
-                  <li>Intermediate Course</li>
-                  <li>Advance Course</li>
-                </ul>
+            <div
+              className="relative"
+              onMouseEnter={() => setIsOpen(true)}
+              ref={triggerRef}
+            >
+              <span className="flex items-center gap-1 lg:border-r lg:pr-3">
+                Course <span className="text-xs">&#9660;</span>
+              </span>
+
+              {isOpen && (
+                <div
+                  ref={modalRef}
+                  className="absolute top-[40px] left-1/2 -translate-x-1/2 w-[900px] md:bg-black text-white p-6 shadow-lg z-50"
+                >
+                  <div className="md:absolute md:top-[-10px] md:left-1/2 md:-translate-x-1/2 md:w-0 md:h-0 
+                      md:border-l-[10px] md:border-r-[10px] md:border-b-[10px] 
+                      md:border-l-transparent md:border-r-transparent md:border-b-black"></div>
+
+                  <div className="flex justify-end">
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="text-white text-2xl font-bold hover:text-red-400 cursor-pointer"
+                      aria-label="close"
+                    >
+                      ×
+                    </button>
+                  </div>
+
+                  <div className="md:grid md:grid-cols-4 md:gap-6 mde:mt-2 flex flex-col">
+                    <Link href="/osaka">
+                      <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Osaka Dialog Course</h3>
+                    </Link>
+
+                    <Link href="/beginner">
+                      <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Beginner Course</h3>
+                    </Link>
+
+                    <Link href="/intermediate">
+                      <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Intermediate Course</h3>
+                    </Link>
+
+                    <Link href="/advanced">
+                      <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Advance Course</h3>
+                    </Link>
+                  </div>
+                </div>
               )}
             </div>
 
@@ -88,9 +125,6 @@ export default function Header() {
               onMouseEnter={() => setIsOpen(true)}
               ref={triggerRef}
             >
-              <span className="flex items-center gap-1 lg:border-r lg:pr-3">
-                Course <span className="text-xs">&#9660;</span>
-              </span>
 
               {isOpen && (
                 <div
