@@ -4,13 +4,13 @@ import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);     //   Modal state
-  const [menuOpen, setMenuOpen] = useState(false); // humberger menu state
+  const [isOpen, setIsOpen] = useState(false);     // Modal state
+  const [menuOpen, setMenuOpen] = useState(false); // Hamburger menu state
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const triggerRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLLIElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function Header() {
 
   return (
     <header className="bg-red-200 sm:h-auto h-[80px]">
-      <Link href={'/'}>
+      <Link href="/">
         <div className="flex items-center">
           <Image
             className="rounded-full mr-2 ml-5 mt-2"
@@ -47,6 +47,7 @@ export default function Header() {
         </div>
       </Link>
 
+      {/* Hamburger icon */}
       <div
         className="w-[100px] h-[100px] fixed top-0 right-0 z-30 cursor-pointer flex justify-center items-center md:hidden"
         onClick={toggleMenu}
@@ -56,6 +57,7 @@ export default function Header() {
         <span className={`absolute w-[50px] h-[4px] bg-[#333] transition-all duration-300 ease-in-out ${menuOpen ? 'top-[50px] rotate-[45deg]' : 'top-[64px]'}`} />
       </div>
 
+      {/* Navigation */}
       <nav
         id="nav"
         className={`${menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
@@ -63,90 +65,51 @@ export default function Header() {
       >
         <ul className="flex flex-col md:flex-row gap-4 justify-center items-center mt-24 md:mt-0">
 
-          <li className="lg:border-r lg:pr-3">
+          <li className="lg:border-r lg:pr-3 cursor-pointer hover:opacity-80">
             <Link href="/">Home</Link>
           </li>
 
           {/* Course Menu */}
-          <li className="cursor-pointer">
-            {/* Smartphone */}
-            <div
-              className="relative"
-              onMouseEnter={() => setIsOpen(true)}
-              ref={triggerRef}
-            >
-              <span className="flex items-center gap-1 lg:border-r lg:pr-3">
-                Course <span className="text-xs">&#9660;</span>
-              </span>
+          <li
+            className="relative cursor-pointer"
+            onMouseEnter={() => setIsOpen(true)}
+            ref={triggerRef}
+          >
+            <button className="flex items-center gap-1 lg:border-r lg:pr-3 cursor-pointer hover:opacity-80">
+              Course <span className="text-xs">&#9660;</span>
+            </button>
 
-              {isOpen && (
-                <div
-                  ref={modalRef}
-                  className="absolute top-[40px] left-1/2 -translate-x-1/2 w-[900px] md:bg-black text-white p-6 shadow-lg z-50"
-                >
-                  <div className="md:absolute md:top-[-10px] md:left-1/2 md:-translate-x-1/2 md:w-0 md:h-0 
-                      md:border-l-[10px] md:border-r-[10px] md:border-b-[10px] 
-                      md:border-l-transparent md:border-r-transparent md:border-b-black"></div>
+            {isOpen && (
+              <div
+                ref={modalRef}
+                className="absolute top-[40px] left-1/2 -translate-x-1/2 w-[900px] md:bg-black text-white p-6 shadow-lg z-50"
+              >
+                <div className="md:absolute md:top-[-10px] md:left-1/2 md:-translate-x-1/2 md:w-0 md:h-0 
+                  md:border-l-[10px] md:border-r-[10px] md:border-b-[10px] 
+                  md:border-l-transparent md:border-r-transparent md:border-b-black"></div>
 
-                  <div className="flex justify-end">
-                    <button
-                      onClick={() => setIsOpen(false)}
-                      className="text-white text-2xl font-bold hover:text-red-400 cursor-pointer"
-                      aria-label="close"
-                    >
-                      ×
-                    </button>
-                  </div>
-
-                  <div className="md:grid md:grid-cols-4 md:gap-6 mde:mt-2 flex flex-col">
-                    <Link href="/osaka">
-                      <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Osaka Dialog Course</h3>
-                    </Link>
-
-                    <Link href="/beginner">
-                      <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Beginner Course</h3>
-                    </Link>
-
-                    <Link href="/intermediate">
-                      <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Intermediate Course</h3>
-                    </Link>
-
-                    <Link href="/advanced">
-                      <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Advance Course</h3>
-                    </Link>
-                  </div>
+                <div className="flex justify-end">
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="text-white text-2xl font-bold hover:text-red-400 cursor-pointer"
+                    aria-label="close"
+                  >
+                    ×
+                  </button>
                 </div>
-              )}
-            </div>
 
-            {/* PC */}
-            <div
-              className="relative hidden md:block"
-              onMouseEnter={() => setIsOpen(true)}
-              ref={triggerRef}
-            >
+                {/* Smartphone View */}
+                <div className="md:hidden flex flex-col gap-4 mt-4">
+                  <Link href="/osaka" className="hover:underline">Osaka Dialog Course</Link>
+                  <Link href="/beginner" className="hover:underline">Beginner Course</Link>
+                  <Link href="/intermediate" className="hover:underline">Intermediate Course</Link>
+                  <Link href="/advanced" className="hover:underline">Advance Course</Link>
+                </div>
 
-              {isOpen && (
-                <div
-                  ref={modalRef}
-                  className="absolute top-[40px] left-1/2 -translate-x-1/2 w-[900px] bg-black text-white p-6 shadow-lg z-50"
-                >
-                  <div className="absolute top-[-10px] left-1/2 -translate-x-1/2 w-0 h-0 
-                      border-l-[10px] border-r-[10px] border-b-[10px] 
-                      border-l-transparent border-r-transparent border-b-black"></div>
-
-                  <div className="flex justify-end">
-                    <button
-                      onClick={() => setIsOpen(false)}
-                      className="text-white text-2xl font-bold hover:text-red-400 cursor-pointer"
-                      aria-label="close"
-                    >
-                      ×
-                    </button>
-                  </div>
-
-                  <div className="grid grid-cols-4 gap-6 mt-2">
-                    <div>
+                {/* PC View */}
+                <div className="hidden md:grid md:grid-cols-4 md:gap-6 mt-4">
+                  <div>
+                    <Link href="/osaka">
                       <Image
                         src="/osaka.jpg"
                         alt="Osaka Dialog Course"
@@ -154,9 +117,15 @@ export default function Header() {
                         width={300}
                         height={200}
                       />
+                    </Link>
+                    <Link href="/osaka" className="hover:opacity-80">
                       <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Osaka Dialog Course</h3>
-                    </div>
-                    <div>
+                    </Link>
+                  </div>
+
+
+                  <div>
+                    <Link href="/beginner">
                       <Image
                         src="/hiragana.jpg"
                         alt="Beginner Course"
@@ -164,9 +133,14 @@ export default function Header() {
                         width={300}
                         height={200}
                       />
+                    </Link>
+                    <Link href="/beginner" className="hover:opacity-80">
                       <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Beginner Course</h3>
-                    </div>
-                    <div>
+                    </Link>
+                  </div>
+
+                  <div>
+                    <Link href="/intermediate">
                       <Image
                         src="/japan.jpg"
                         alt="Intermediate Course"
@@ -174,9 +148,14 @@ export default function Header() {
                         width={300}
                         height={200}
                       />
+                    </Link>
+                    <Link href="/intermediate" className="hover:opacity-80">
                       <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Intermediate Course</h3>
-                    </div>
-                    <div>
+                    </Link>
+                  </div>
+
+                  <div>
+                    <Link href="/advanced">
                       <Image
                         src="/news.jpg"
                         alt="Advance Course"
@@ -184,19 +163,21 @@ export default function Header() {
                         width={300}
                         height={200}
                       />
+                    </Link>
+                    <Link href="/advanced" className="hover:opacity-80">
                       <h3 className="font-bold border-b border-red-500 mb-2 pb-1">Advance Course</h3>
-                    </div>
+                    </Link>
                   </div>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </li>
 
-          <li className="lg:border-r lg:pr-3">
+          <li className="lg:border-r lg:pr-3 cursor-pointer hover:opacity-80">
             <Link href="#contact" onClick={() => setMenuOpen(false)}>Contact</Link>
           </li>
         </ul>
       </nav>
-    </header>
+    </header >
   );
 }

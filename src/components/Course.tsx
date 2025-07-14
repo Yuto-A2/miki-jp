@@ -18,7 +18,7 @@ export default function Course() {
                             "In the Osaka Dialect Course, you'll learn natural Osaka dialect from a teacher who is originally from Osaka.",
                             "Why not give it a try and learn this unique dialect that's becoming increasingly popular among Japanese learners?"
                         ],
-                        link: "#"
+                        link: "/osaka"
                     },
                     {
                         title: 'Beginner Course',
@@ -29,7 +29,7 @@ export default function Course() {
                             "We'll support you step by step as you build a strong foundation in reading, writing, listening, and speaking.",
                             "Let's enjoy learning together and gain confidence along the way!"
                         ],
-                        link: "#"
+                        link: "/beginner"
                     },
                     {
                         title: 'Intermediate Course',
@@ -39,7 +39,7 @@ export default function Course() {
                             "You'll learn more complex grammar, expand your vocabulary, and practice real-life conversations.",
                             "Let's take your Japanese to the next level together!"
                         ],
-                        link: "#"
+                        link: "/intermediate"
                     },
                     {
                         title: 'Advance Course',
@@ -49,7 +49,7 @@ export default function Course() {
                             "Through news articles, essays, and discussions, you'll learn more sophisticated grammar and vocabulary.",
                             "Take your Japanese to a near-native level and speak with fluency and nuance."
                         ],
-                        link: "#"
+                        link: "/advanced"
                     }
                 ].map((course, i) => (
                     <div key={i} className="flex flex-col h-full border border-black">
