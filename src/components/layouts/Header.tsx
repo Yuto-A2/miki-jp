@@ -193,7 +193,7 @@ export default function Header() {
           </li>
 
           <li className="lg:border-r lg:pr-3">
-            <Link href="#contact">Contact</Link>
+            <Link href="#contact" onClick={() => setMenuOpen(false)}>Contact</Link>
           </li>
         </ul>
       </nav>
