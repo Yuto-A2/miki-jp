@@ -70,7 +70,7 @@ export default function Course() {
                                 <p key={idx} className="mb-2">{text}</p>
                             ))}
                             <div className="mt-auto text-center">
-                                <CourseBtn href={course.link} />
+                                <CourseBtn href={course.link} title="More Details" />
                             </div>
                         </div>
                     </div>
