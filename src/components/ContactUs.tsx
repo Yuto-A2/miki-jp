@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import SectionTitle from "./layouts/SectionTitle";
 
 export default function ContactUs() {
     const [successMessage, setSuccessMessage] = useState("");
@@ -45,9 +46,7 @@ export default function ContactUs() {
 
     return (
         <div className="border-solid border-[1px] border-[#FFDCCC] bg-[#FFDCCC]">
-            <h2 className="text-center text-lg mt-10 font-bold relative after:content-[''] after:block after:w-30 after:h-[2px]
-               after:bg-black after:mt-1 after:mx-auto" id="contact">Contact Form</h2>
-
+            <SectionTitle headerTitle="Contact Form" id="contact"></SectionTitle>
             {successMessage && <p className="text-green-600 text-center mt-2">{successMessage}</p>}
             {errorMessage && <p className="text-red-600 text-center mt-2">{errorMessage}</p>}
 

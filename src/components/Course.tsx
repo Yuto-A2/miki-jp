@@ -1,13 +1,11 @@
 import Image from 'next/image';
 import CourseBtn from './CourseBtn';
+import SectionTitle from './layouts/SectionTitle';
 
 export default function Course() {
     return (
         <>
-            <h2 className="text-lg text-center mt-4 font-bold relative after:content-[''] after:block after:w-20 after:h-[2px] after:bg-black after:mx-auto after:mt-1">
-                Course
-            </h2>
-
+            <SectionTitle headerTitle="Course"></SectionTitle>
             <div className="mb-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-screen-xl mx-auto mt-6 items-stretch w-[90%]">
                 {/* Card */}
                 {[

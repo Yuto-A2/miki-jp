@@ -1,11 +1,11 @@
 import Image from 'next/image';
+import SectionTitle from './layouts/SectionTitle';
 export default function Reason() {
     return (
         <>
             {/* why mikity japanese */}
 
-            <h2 className="text-lg text-center mt-5 font-bold relative after:content-[''] after:block after:w-50 after:h-[2px]
-               after:bg-black after:mx-auto after:mt-1">Why ミキティ Japanese?</h2>
+            <SectionTitle headerTitle="Why ミキティ Japanese?"></SectionTitle>
             <div className="flex flex-col mt-4 lg:flex-row lg:items-stretch items-center justify-center">
                 <div className="bg-[#B7B1F2] p-3 lg:w-[40%] w-[90%] flex flex-col justify-center">
                     <h3 className="text-center relative after:content-[''] after:block after:w-56 after:h-[2px] after:bg-black after:mx-auto mb-8">Native Osaka Dialect</h3>
